@@ -49,6 +49,8 @@
 		4804C2001EDB27A1006BC657 /* VerticalTweetAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTweetAppUITests.swift; sourceTree = "<group>"; };
 		4804C2021EDB27A1006BC657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4804C20F1EDB2841006BC657 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4888F3F01EDFCEDF0099CAA4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4888F3F11EDFCEDF0099CAA4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4804C1E51EDB27A1006BC657 /* Base */,
+				4888F3F01EDFCEDF0099CAA4 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4804C1EA1EDB27A1006BC657 /* Base */,
+				4888F3F11EDFCEDF0099CAA4 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -334,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -385,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -435,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.green-minto.VerticalTweetApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -449,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.green-minto.VerticalTweetApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -530,6 +536,7 @@
 				4804C2071EDB27A1006BC657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4804C2081EDB27A1006BC657 /* Build configuration list for PBXNativeTarget "VerticalTweetAppTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +545,7 @@
 				4804C20A1EDB27A1006BC657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4804C20B1EDB27A1006BC657 /* Build configuration list for PBXNativeTarget "VerticalTweetAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +554,7 @@
 				4804C20D1EDB27A1006BC657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

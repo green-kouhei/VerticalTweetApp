@@ -28,10 +28,10 @@ class ViewController: UIViewController {
         
     }
 
+    /*キーボード閉じる処理*/
     func textFieldShouldEndEditing(_ tweetBOX: UITextField) -> Bool{
         
         tweetText = tweetBOX.text!
-//        print(tweetText)
         
         // キーボードを閉じる
         tweetBOX.resignFirstResponder()
@@ -40,26 +40,20 @@ class ViewController: UIViewController {
         return true
     }
     
-    
+    /*分割処理*/
     func Split() {
-        tweetText = ""
+        tweetText = ""//変数初期化
         let text = tweetBOX!.text
-        let characters = text!.characters.map { String($0) }
-        print(characters)
+        let characters = text!.characters.map { String($0) }//一文字ごとにsplit
+        print(characters)//debug
         
-        var newText = characters.map {tweetText=tweetText+$0 + "\n"}
-//        tweetText = characters.map {$0 + "\n"}
+        var newText = characters.map {tweetText=tweetText+$0 + "\n"}//縦分割&mapを全部くっつける
         
-        print(newText)
+        print(newText)//debug
         
-        
-        
-//        tweetText = newText as! String
-        
-        
-//        tweetText=tweetText+text
     }
     
+    /*tweet*/
     func tweet()  {
         
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
@@ -67,31 +61,31 @@ class ViewController: UIViewController {
             let slc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             
             slc?.setInitialText(tweetText+"#タテッター")
-//            slc?.setInitialText("#タテッター")
             
             // ツイート入力画面表示
             present(slc!, animated: true, completion: {
             })
             
-            // 事後処理
+            
             slc?.completionHandler = {
                 (result:SLComposeViewControllerResult) -> () in
                 switch (result) {
                     
-                // 投稿
+                // tweet
                 case SLComposeViewControllerResult.done:
                     print("tweeted")
                     
                 // キャンセル
                 case SLComposeViewControllerResult.cancelled:
-                    print("tweet cancel")
+                    print("cancel")
                     
                 }
             }
         } else {
-            print("can not tweet")
+            print("not tweet")
         }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

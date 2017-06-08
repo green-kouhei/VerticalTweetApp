@@ -8,6 +8,8 @@
 
 import UIKit
 import Social
+import GoogleMobileAds
+
 
 class ViewController: UIViewController {
     
@@ -24,6 +26,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tweetBOX!.delegate = self as? UITextFieldDelegate
         tweetBOX!.returnKeyType = .done
+        
+        /*広告部分*/
+        let testID = "ca-app-pub-4066029705007424/7551228999"
+        
+        //バナーの作成
+        var bannerView:GADBannerView = GADBannerView()
+        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        let bHeight :CGFloat = 50
+        bannerView.frame = CGRect(x: 0 , y: self.view.frame.size.height-bHeight, width: self.view.frame.width, height: bHeight)
+        
+        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
+        bannerView.adUnitID = testID
+        bannerView.rootViewController = self
+        
+        /*debug用に端末ID SET*/
+        let request = GADRequest()
+        request.testDevices = ["47f0c1f3780ab910723c310afe6f1c30"];
+        
+        bannerView.load(GADRequest())
+        self.view.addSubview(bannerView)
+        
         
         
     }

@@ -15,6 +15,7 @@
 		4804C1F61EDB27A1006BC657 /* VerticalTweetAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C1F51EDB27A1006BC657 /* VerticalTweetAppTests.swift */; };
 		4804C2011EDB27A1006BC657 /* VerticalTweetAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C2001EDB27A1006BC657 /* VerticalTweetAppUITests.swift */; };
 		4804C2101EDB2841006BC657 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804C20F1EDB2841006BC657 /* Social.framework */; };
+		67710B340DE00D1A5C931E22 /* Pods_VerticalTweetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1E2F439E1C307FBCB4C277 /* Pods_VerticalTweetApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C1E2F439E1C307FBCB4C277 /* Pods_VerticalTweetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerticalTweetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3479FEC90F02246B6F8DD28C /* Pods-VerticalTweetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerticalTweetApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VerticalTweetApp/Pods-VerticalTweetApp.release.xcconfig"; sourceTree = "<group>"; };
+		3FC9C299DA7A89212177D157 /* Pods-VerticalTweetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerticalTweetApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VerticalTweetApp/Pods-VerticalTweetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4804C1DD1EDB27A1006BC657 /* VerticalTweetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalTweetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4804C1E01EDB27A1006BC657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4804C1E21EDB27A1006BC657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4804C2101EDB2841006BC657 /* Social.framework in Frameworks */,
+				67710B340DE00D1A5C931E22 /* Pods_VerticalTweetApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 				4804C1FF1EDB27A1006BC657 /* VerticalTweetAppUITests */,
 				4804C1DE1EDB27A1006BC657 /* Products */,
 				4804C20E1EDB2841006BC657 /* Frameworks */,
+				D9C002AD61799343FB706F81 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +141,18 @@
 			isa = PBXGroup;
 			children = (
 				4804C20F1EDB2841006BC657 /* Social.framework */,
+				0C1E2F439E1C307FBCB4C277 /* Pods_VerticalTweetApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9C002AD61799343FB706F81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FC9C299DA7A89212177D157 /* Pods-VerticalTweetApp.debug.xcconfig */,
+				3479FEC90F02246B6F8DD28C /* Pods-VerticalTweetApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4804C2051EDB27A1006BC657 /* Build configuration list for PBXNativeTarget "VerticalTweetApp" */;
 			buildPhases = (
+				7F7406AA88E1FC018C4460DF /* [CP] Check Pods Manifest.lock */,
 				4804C1D91EDB27A1006BC657 /* Sources */,
 				4804C1DA1EDB27A1006BC657 /* Frameworks */,
 				4804C1DB1EDB27A1006BC657 /* Resources */,
+				001593CFCE659D503E67A999 /* [CP] Embed Pods Frameworks */,
+				FC69D1C3F7B89D6B6C94318F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +289,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		001593CFCE659D503E67A999 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VerticalTweetApp/Pods-VerticalTweetApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7406AA88E1FC018C4460DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC69D1C3F7B89D6B6C94318F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VerticalTweetApp/Pods-VerticalTweetApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4804C1D91EDB27A1006BC657 /* Sources */ = {
@@ -433,6 +500,7 @@
 		};
 		4804C2061EDB27A1006BC657 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC9C299DA7A89212177D157 /* Pods-VerticalTweetApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NX753GBY5A;
@@ -447,6 +515,7 @@
 		};
 		4804C2071EDB27A1006BC657 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3479FEC90F02246B6F8DD28C /* Pods-VerticalTweetApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NX753GBY5A;
